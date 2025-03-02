@@ -403,7 +403,7 @@ export default function BackgroundPaths({
                 Security and Privacy You Can Trust
               </h2>
               <p className="text-lg text-neutral-700 dark:text-neutral-300 max-w-2xl mx-auto">
-                With our team's experience from building Oxpass.io, we've embedded security and privacy into Support3 from day one.
+                With our team&apos;s experience from building Oxpass.io, we&apos;ve embedded security and privacy into Support3 from day one.
               </p>
             </div>
 

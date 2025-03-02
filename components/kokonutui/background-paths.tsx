@@ -258,8 +258,8 @@ export default function BackgroundPaths({
       imageUrl: "/images/resolution.png",
     },
     {
-      title: "Works with your tools",
-      description: "Support3 automates workflows by integrating with existing systems.",
+      title: "Autonomous actions across tools",
+      description: "Support3 automates workflows by integrating with existing systems and can be configured to take actions independently. Some examples: ",
       subFeatures: [
         {
           heading: "Logs issues in support platforms",

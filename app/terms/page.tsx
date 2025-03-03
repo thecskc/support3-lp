@@ -7,12 +7,12 @@ export default function TermsOfService() {
           <p className="text-sm text-neutral-600 dark:text-neutral-400 mb-8">Last Updated: March 2025</p>
 
           <p className="mb-8">
-            Welcome to Support3, an advanced AI-driven technical support solution provided by Chennchuu Inc., a Delaware C-Corporation ("Company," "Support3," "we," or "us"). These Terms of Service ("Terms") govern your use of our website, platform, and related services (collectively, the "Services"). By accessing or using the Services, you agree to comply with and be bound by these Terms. If you do not agree, you may not use our Services.
+            Welcome to Support3, an advanced AI-driven technical support solution provided by Chennchuu Inc., a Delaware C-Corporation (&quot;Company,&quot; &quot;Support3,&quot; &quot;we,&quot; or &quot;us&quot;). These Terms of Service (&quot;Terms&quot;) govern your use of our website, platform, and related services (collectively, the &quot;Services&quot;). By accessing or using the Services, you agree to comply with and be bound by these Terms. If you do not agree, you may not use our Services.
           </p>
 
           <h2 className="text-2xl font-semibold mt-12 mb-4">1. Scope and Changes to These Terms</h2>
           <p className="mb-6">
-            We reserve the right to update, modify, or discontinue any aspect of the Services at our discretion. We will notify users of material changes by updating the "Last Updated" date above. Your continued use of the Services constitutes acceptance of the revised Terms.
+            We reserve the right to update, modify, or discontinue any aspect of the Services at our discretion. We will notify users of material changes by updating the &quot;Last Updated&quot; date above. Your continued use of the Services constitutes acceptance of the revised Terms.
           </p>
 
           <h2 className="text-2xl font-semibold mt-12 mb-4">2. Eligibility and Account Responsibilities</h2>
@@ -52,7 +52,7 @@ export default function TermsOfService() {
 
           <h2 className="text-2xl font-semibold mt-12 mb-4">7. Limitation of Liability</h2>
           <p className="mb-6">
-            Support3 is provided on an "as-is" and "as-available" basis. To the fullest extent permitted by law, we disclaim all warranties and shall not be liable for any indirect, incidental, or consequential damages arising from the use of our Services.
+            Support3 is provided on an &quot;as-is&quot; and &quot;as-available&quot; basis. To the fullest extent permitted by law, we disclaim all warranties and shall not be liable for any indirect, incidental, or consequential damages arising from the use of our Services.
           </p>
 
           <h2 className="text-2xl font-semibold mt-12 mb-4">8. Dispute Resolution</h2>

@@ -7,7 +7,7 @@ export default function PrivacyPolicy() {
           <p className="text-sm text-neutral-600 dark:text-neutral-400 mb-8">Last Updated: March 2025</p>
 
           <p className="mb-8">
-            At Chennchuu Inc., a Delaware C-Corporation ("Company," "Support3," "we," or "us"), we value your privacy and are committed to protecting your personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard your information.
+            At Chennchuu Inc., a Delaware C-Corporation (&quot;Company,&quot; &quot;Support3,&quot; &quot;we,&quot; or &quot;us&quot;), we value your privacy and are committed to protecting your personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard your information.
           </p>
 
           <h2 className="text-2xl font-semibold mt-12 mb-4">1. Information We Collect</h2>

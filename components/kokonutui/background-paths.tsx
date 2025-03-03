@@ -432,7 +432,7 @@ export default function BackgroundPaths({
             </div>
             <div className="flex gap-6 text-sm">
               <Link 
-                href="https://support3.xyz/privacy" 
+                href="/privacy" 
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-neutral-600 hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-neutral-100 transition-colors cursor-pointer"
@@ -440,7 +440,7 @@ export default function BackgroundPaths({
                 Privacy Policy
               </Link>
               <Link 
-                href="https://support3.xyz/terms" 
+                href="/terms" 
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-neutral-600 hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-neutral-100 transition-colors cursor-pointer"

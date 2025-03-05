@@ -20,6 +20,35 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
+## ROI Calculator
+
+The project includes an ROI calculator that uses the Claude API to provide personalized estimates of cost savings and revenue gains from implementing Support3.
+
+### Setting up Claude API
+
+1. Get a Claude API key from [Anthropic Console](https://console.anthropic.com/)
+2. Copy the `.env.local.example` file to `.env.local`
+3. Replace `your_claude_api_key_here` with your actual Claude API key
+
+```bash
+cp .env.local.example .env.local
+```
+
+The calculator uses Claude 3.7 Sonnet to analyze your company's profile and provide:
+- Estimated annual cost savings
+- Estimated annual revenue gains
+- A summary analysis of the ROI
+- A detailed breakdown of how these figures were calculated
+
+If you don't have a Claude API key, the calculator will fall back to using pre-defined estimates based on company size.
+
+### How the ROI Calculator Works
+
+1. The calculator takes your company size, support team size, and optional revenue as inputs
+2. It sends this information to Claude 3.7 Sonnet with a prompt to analyze the potential ROI
+3. Claude returns a structured JSON response with cost savings, revenue gains, and analysis
+4. The calculator displays these results in an interactive, user-friendly format
+
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:

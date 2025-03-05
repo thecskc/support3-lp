@@ -99,35 +99,49 @@ export async function POST(request: Request) {
   try {
     const { teamSize, supportTeamSize, revenue } = await request.json();
 
+    const teamSizeNum = parseInt(teamSize)
+    const supportTeamSizeNum = parseInt(supportTeamSize)
+    const revenueNum = revenue ? parseInt(revenue) : undefined
+
     // Validate inputs
-    if (!teamSize || !supportTeamSize) {
+    if (isNaN(teamSizeNum) || teamSizeNum <= 0) {
       return NextResponse.json(
-        { error: 'Team size and support team size are required' },
+        { error: "Invalid team size" },
         { status: 400 }
       );
     }
 
-    // Construct the prompt for Claude
-    const prompt = `Given:
-- A company with ${teamSize} employees
-- A support team of ${supportTeamSize} people
-- ${revenue ? `Annual revenue of $${revenue}` : '(Revenue not provided)'}
+    if (isNaN(supportTeamSizeNum) || supportTeamSizeNum <= 0) {
+      return NextResponse.json(
+        { error: "Invalid support team size" },
+        { status: 400 }
+      );
+    }
 
-Estimate:
-1. Annual **cost savings** from AI automation. This happens through - 
-a) Reduction in support workload
-b) Elimination or reduction in manual tracking
-c) Reduced time in operational workflows such as updating internal tools 
-d) Reduction in need for hiring. Teams can scale and handle additional support without having to linearly increase headcount.
-
-2. Annual **revenue gains** from - 
-a) Quicker tracking of issues leading to faster iteration cycles (keep in mind majority of the work is product development but we can connect the customer to the team faster)
-b) Quicker delivery of product and revenue insights from customer touchpoints and channels 
-c) Improved customer satisfaction from faster and higher quality responses
-
-Given that headcount reduction maybe one of the bigger benefits dollar wise, usually cost savings will be higher than revenue gains. If that's not the case, then make sure your reasoning is right as there could be exceptions.
-
-If revenue is **not provided**, estimate it based on the team size using typical benchmarks.`;
+    // Include support team size in the prompt for more accurate calculations
+    const prompt = `As an expert financial analyst specializing in ROI calculations for AI automation in technical support:
+    
+    Please analyze the potential ROI for a company with:
+    - Total employees: ${teamSizeNum}
+    - Support team members: ${supportTeamSizeNum}
+    ${revenueNum ? `- Annual revenue: $${revenueNum}` : ''}
+    
+    Provide a detailed analysis of cost savings and revenue gains from implementing AI automation in their technical support operations.
+    
+    Return the response in the following JSON format:
+    {
+      "costSavings": "Formatted annual cost savings with currency symbol",
+      "revenueSavings": "Formatted annual revenue gains with currency symbol",
+      "summary": "2-3 paragraph summary of the analysis",
+      "fullAnalysis": "Detailed breakdown of calculations and assumptions"
+    }
+    
+    Focus on:
+    1. Reduced support costs through automation
+    2. Improved efficiency and response times
+    3. Better customer satisfaction leading to retention
+    4. Insights leading to product improvements
+    `
 
     // Call Claude API
     try {
